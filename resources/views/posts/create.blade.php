@@ -3,7 +3,14 @@
 @section('content')
 <div class="container">
     <div class="card card-default">
-        <div class="card-header">Create Post</div>
+        <div class="card-header">
+            @if(isset($post))
+                    Edit Post
+            @else
+                Create Post
+            @endif
+
+        </div>
         <div class="card-body">
             <form action="{{isset($post) ? route('posts.update', $post->id) : route('posts.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -17,23 +24,23 @@
                     <input type="text" id="name" class="form-control" name="name" value="{{isset($post) ? $post->name : ''}}">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label for="description">Description</label>
                     <textarea id="description" class="form-control" name="description" cols="5" rows="5">{{isset($post) ? $post->description : ''}}</textarea>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label for="content">Content</label>
                     <input id="content" type="hidden" name="content" value="{{isset($post) ? $post->content : ''}}"> {{--https://github.com/basecamp/trix--}}
                     <trix-editor class="trix-content" input="content"></trix-editor> {{--https://github.com/basecamp/trix--}}
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label for="published_at">Published At</label>
                 </div>
                 <input type="text" id="published_at" class="form-control " name="published_at" value="{{isset($post) ? $post->published_at : ''}}">
 
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label for="category">Category</label>
                     <select name="category" id="category" class="form-control">
                         @foreach ($categories as $category)
@@ -51,18 +58,18 @@
                 </div>
 
                 @if(isset($post))
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <img src="{{asset('storage/' . $post->image)}}" alt="" style="width:100%">
                     </div>
                 @endif
 
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <label for="image">image</label>
                     <input type="file" id="image" class="form-control" name="image">
                 </div>
 
                 @if($tags->count() > 0)
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <label for="tags">Tags</label>
                         <select name="tags[]" id="tags" class="form-control tags-selector" multiple>
                             @foreach ($tags as $tag)
@@ -80,7 +87,7 @@
                     </div>
                 @endif
 
-                <div class="form-group">
+                <div class="form-group mt-2">
                     <button type="submit" class="btn btn-success">
                         {{isset($post) ? 'Update Post' : 'Create Post'}}
                     </button>
