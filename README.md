@@ -2,18 +2,16 @@
 <p align="center"><img src="logo-repo.png" width="300"></p>
 
 
-## About CMS
+## About Laravel-CMS
 
 CMS is a Laravel Content Management System application that contains add, edit and delete categories, tags, and posts and allows to give permission for any user to be an admin.
 
 ## Screenshots
+![CMS1](https://user-images.githubusercontent.com/109177230/200811683-a73c5329-0153-408a-8633-5ed2793bf1f5.png)
+![CMS5](https://user-images.githubusercontent.com/109177230/200811726-53e5b59a-2c73-4806-b19a-0d49befb26a3.png)
 
-![CMS1](https://user-images.githubusercontent.com/109177230/200640770-54bdbe2c-fac3-427e-953d-460628d83ee1.png)
-![CMS2](https://user-images.githubusercontent.com/109177230/200640775-07cdc7ac-e0f5-45ec-af07-f5df6e90cab7.png)
-![CMS3](https://user-images.githubusercontent.com/109177230/200640780-9e18a2a1-9bbf-493c-bfd2-544261bf9d23.png)
-![CMS4](https://user-images.githubusercontent.com/109177230/200640820-52d67451-1173-4a13-9d81-57ddb45b7198.png)
-![CMS5](https://user-images.githubusercontent.com/109177230/200640713-6021da7e-720b-4471-bc53-dc73b4ed8a4f.png)
-![CMS6](https://user-images.githubusercontent.com/109177230/200640751-4196d4c3-ac0e-42e2-a7d3-1dfd9517eaf8.png)
+- For more screenshots [here](screenshots).
+
 
 
 
