@@ -1,4 +1,4 @@
-![logo3](https://user-images.githubusercontent.com/109177230/200639915-1d65cc8d-b315-43cb-add7-5149f297accd.png)
+<p align="center"><img src="logo-repo.png" width="300"></p>
 
 
 ## About CMS
